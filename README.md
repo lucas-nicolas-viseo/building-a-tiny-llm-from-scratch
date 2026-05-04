@@ -6,19 +6,18 @@ Implementing, training, and optimizing a language model from scratch — followi
 
 1. **Implement** a GPT-style architecture end-to-end (tokenizer, model, training loop, evaluation)
 2. **Train** a small model on a curated dataset
-3. **Optimize** inference with hand-written CUDA kernels (attention, FFN, sampling, KV-cache)
+3. **Optimize** inference with hand-written kernels (attention, FFN, sampling, KV-cache)
 4. **Profile** throughput and memory vs. PyTorch baseline
 
 ## Hardware
 
 - NVIDIA RTX 3090 (24 GB VRAM, 936 GB/s memory bandwidth)
-- CPU: (fill in)
-- RAM: (fill in)
+
 
 ## Progress
 
-- [ ] Tokenizer (BPE)
-- [ ] Model architecture (GPT, multi-head attention, RMSNorm, SwiGLU/MLP)
+- [x] Multi-Head Attention implementation
+- [ ] Model architecture (Transfomer Blocks,RMSNorm, SwiGLU/MLP)
 - [ ] Data pipeline & training loop
 - [ ] Training run (loss curves, evaluation)
 - [ ] Custom CUDA kernels — attention
@@ -26,3 +25,4 @@ Implementing, training, and optimizing a language model from scratch — followi
 - [ ] Custom CUDA kernels — sampling / top-k top-p
 - [ ] KV-cache inference
 - [ ] Performance comparison (PyTorch vs. CUDA kernels)
+- [ ] Tokenizer (BPE), Using tiktoken for now, will implement this later as it's not the main goal.
